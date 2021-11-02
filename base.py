@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class Base(ABC):
+class BaseClass(ABC):
     id = 0
     objects_list = list()
 
