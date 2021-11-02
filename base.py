@@ -2,17 +2,17 @@ from abc import ABC, abstractmethod
 
 
 class Base(ABC):
-    _id = 0
+    id = 0
     objects_list = list()
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         self._id = self.generate_id()
         self.store_obj(self)
 
     @classmethod
     def generate_id(cls):
-        cls._id = cls._id + 1
-        return cls._id
+        cls.id = cls.id + 1
+        return cls.id
 
     @classmethod
     def store_obj(cls, obj):
